@@ -17,6 +17,9 @@
 		<td><%= htmlEncode(pedido.getDisplay('name')) %></td>
 		<td><%= htmlEncode(pedido.getDisplay('estado')) %></td>
     <td>
+    
+    <a class="btn" onclick="Backbone.trigger('satisfacer-pedido',{id:<%= pedido.id%>})">Satisfacer</a>
+    
     <% if(showEdit) {%>
     <a onclick="Backbone.trigger('<%= componentId %>-pedido-edit',{id:<%= pedido.id %>}); return false" >Edit</a> |
 	<% } %> 
